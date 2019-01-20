@@ -31,19 +31,15 @@ You can visit http://104.248.243.155 for the website deployed.
 
 ## Set ssh login using keys
 
-	```
 	$ su - grader
 	$ mkdir .ssh
 	$ touch .ssh/authorized_keys
 	$ nano .ssh/authorized_keys
-	```
 	
 paste what you haved copied from the public key and paste here and save the file
 	
-	```
 	$ chmod 700 .ssh
 	$ chmod 644 .ssh/authorized_keys
-	```
 	
 3. reload SSH using `service ssh restart`
 4. now you can use ssh to login with the new user you created
