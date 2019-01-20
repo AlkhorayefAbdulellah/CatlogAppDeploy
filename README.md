@@ -115,6 +115,7 @@ change the clint id if neccery in all three files:
 1-Login.html 2-the json itself 3-app.py(two clint id parameter)
 
 10. Create database schema `sudo python database_setup.py`
+11- Fill it with data `sudo python  seeder.py`
 
 ## Start the virtual machine
 
