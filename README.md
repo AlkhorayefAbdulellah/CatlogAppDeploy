@@ -113,6 +113,7 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
 Then downloud the new json and replace it with the cloned one in the server.
 change the clint id if neccery in all three files:
 1-Login.html 2-the json itself 3-app.py(two clint id parameter)
+
 10. Create database schema `sudo python database_setup.py`
 
 ## Start the virtual machine
