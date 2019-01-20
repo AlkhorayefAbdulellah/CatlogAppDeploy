@@ -51,8 +51,6 @@ You can visit http://104.248.243.155 for the website deployed.
 4. now you can use ssh to login with the new user you created
 
 	`ssh -i [privateKeyFilename] grader@104.248.243.155`
-
-    The ssh passphrase is the same as the root password: Ll112233
     
 ## Update all currently installed packages
 
@@ -123,6 +121,21 @@ change the clint id if neccery in all three places:
 10. Install pip `sudo apt-get install python-pip`
 11. Install psycopg2 `sudo apt-get -qqy install postgresql python-psycopg2`
 12. Create database schema `sudo python database_setup.py`
+
+## Start the virtual machine
+
+- `$ sudo pip install virtualenv`
+- `$ sudo virtualenv venv`
+- `$ source venv/bin/activate`
+- `$ sudo chmod -R 777 venv`
+
+You should see a `(venv)` appears before your username in the command line:
+![venv](https://github.com/callforsky/udacity-linux-configuration/blob/master/pic/pic12.png)
+
+ Now we need to install the Flask and other packages needed for this application
+- `$ sudo apt-get install python-pip`
+- `$ sudo pip install Flask`
+- `$ sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlaclemy_utils requests render_template, redirect, psslib [anything else you have built within this application`
 
 ## Configure and Enable a New Virtual Host
 1. Create CatlogApp.conf to edit: `sudo nano /etc/apache2/sites-available/CatlogApp.conf`
