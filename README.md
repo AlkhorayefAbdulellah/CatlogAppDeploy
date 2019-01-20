@@ -103,11 +103,7 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
 	postgres=# GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;
 	```
 7. Quit postgreSQL `postgres=# \q`
-8. Exit from user "postgres" 
-	
-	```
-	exit
-	```
+8. Exit from user "postgres" `exit`
  
 ## Install git, clone and setup your Catalog App project.
 1. Install Git using `sudo apt-get install git`
