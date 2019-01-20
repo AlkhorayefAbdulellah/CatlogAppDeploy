@@ -102,10 +102,10 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
 ## Install git, clone and setup your Catalog App project.
 1. Install Git using `sudo apt-get install git`
 2. Move to `cd /var/www`  
-3. Create the application directory `sudo mkdir FlaskApp`
-4. Move inside this directory using `cd FlaskApp`
+3. Create the application directory `sudo mkdir catalog`
+4. Move inside this directory using `cd catalog`
 5. Clone the Catalog App to the virtual machine `git clone https://github.com/AlkhorayefAbdulellah/CatlogApp`
-6. Move to the project directory, in my case it is CatlogApp  `cd CatlogApp`
+6. Move to the project directory, in my case it is catalog  `cd catalog`
 7. Rename `app.py` to `__init__.py` using `sudo mv app.py __init__.py`
 8. Edit `database_setup.py`, `__init__.py` and `seeder.py` and change `engine = create_engine('sqlite:///toyshop.db')` to `engine = create_engine('postgresql://catalog:password@localhost/catalog')`
 9. Add http://104.248.243.155.xip.io:80 to google APIs
@@ -133,22 +133,20 @@ You should see a `(venv)` appears before your username in the command line:
 - `$ pip install --user httplib2 oauth2client sqlalchemy psycopg2 sqlaclemy_utils requests render_template, redirect, psslib [anything else you have built within this application`
 
 ## Configure and Enable a New Virtual Host
-1. Create CatlogApp.conf to edit: `sudo nano /etc/apache2/sites-available/CatlogApp.conf`
+1. Create CatlogApp.conf to edit: `sudo nano /etc/apache2/sites-available/catalog.conf`
 2. Add the following lines of code to the file to configure the virtual host. 
 	
 	```
 	<VirtualHost *:80>
        ServerName 104.248.243.155
        ServerAdmin iiiLohy@gmail.com
-       WSGIDaemonProcess CatlogApp python-path=/var/www/FlaskApp:/var/www/FlaskApp/venv/lib/python2.7/site-pac$
-       WSGIProcessGroup CatlogApp
-       WSGIScriptAlias / /var/www/FlaskApp/catlogapp.wsgi
-       <Directory /var/www/FlaskApp/CatlogApp/>
+       WSGIScriptAlias / /var/www/catalog/catalog.wsgi
+       <Directory /var/www/catalog/catalog/>
                Order allow,deny
                Allow from all
        </Directory>
-       Alias /static /var/www/FlaskApp/CatlogApp/static
-       <Directory /var/www/FlaskApp/CatlogApp/static/>
+       Alias /static /var/www/catalog/catalog/static
+       <Directory /var/www/catalog/catalog/static/>
                Order allow,deny
                Allow from all
        </Directory>
@@ -158,24 +156,24 @@ You should see a `(venv)` appears before your username in the command line:
 	</VirtualHost>
 	```
 	
-3. Enable the virtual host with the following command: `sudo a2ensite FlaskApp`
+3. Enable the virtual host with the following command: `sudo a2ensite catalog`
 
 ## Create the .wsgi File
-1. Create the .wsgi File under /var/www/FlaskApp: 
+1. Create the .wsgi File under /var/www/catalog: 
 	
 	```
-	cd /var/www/FlaskApp
+	cd /var/www/catalog
 	sudo nano catlogapp.wsgi 
 	```
-2. Add the following lines of code to the catlogapp.wsgi file:
+2. Add the following lines of code to the catalog.wsgi file:
 	
 	```
 	#!/usr/bin/python
 	import sys
 	import logging
 	logging.basicConfig(stream=sys.stderr)
-	sys.path.insert(0,"/var/www/FlaskApp/")
-	from FlaskApp import app as application
+	sys.path.insert(0,"/var/www/catalog/")
+	from catalog import app as application
 	application.secret_key = 'Lohy'
 	```
 
