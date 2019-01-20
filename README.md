@@ -147,8 +147,9 @@ change the clint id if neccery in all three places:
        ErrorLog ${APACHE_LOG_DIR}/error.log
        LogLevel warn
        CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+	</VirtualHost>
 	```
+	
 3. Enable the virtual host with the following command: `sudo a2ensite FlaskApp`
 
 ## Create the .wsgi File
@@ -156,19 +157,18 @@ change the clint id if neccery in all three places:
 	
 	```
 	cd /var/www/FlaskApp
-	sudo nano flaskapp.wsgi 
+	sudo nano catlogapp.wsgi 
 	```
-2. Add the following lines of code to the flaskapp.wsgi file:
+2. Add the following lines of code to the catlogapp.wsgi file:
 	
 	```
 	#!/usr/bin/python
-    import sys
-    import logging
-    logging.basicConfig(stream=sys.stderr)
-    sys.path.insert(0,"/var/www/FlaskApp/")
-
-    from FlaskApp import app as application
-    application.secret_key = 'Lohy'
+	import sys
+    	import logging
+    	logging.basicConfig(stream=sys.stderr)
+    	sys.path.insert(0,"/var/www/FlaskApp/")
+    	from FlaskApp import app as application
+    	application.secret_key = 'Lohy'
 	```
 
 ## Restart Apache
