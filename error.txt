@@ -1,63 +1,11 @@
-grader@Lohy:~$ sudo cat /var/log/apache2/error.log
-[Sun Jan 20 06:25:06.354638 2019] [wsgi:warn] [pid 8287:tid 140389922641792] mod_wsgi: Compiled for Python/2.7.11.
-[Sun Jan 20 06:25:06.355332 2019] [wsgi:warn] [pid 8287:tid 140389922641792] mod_wsgi: Runtime using Python/2.7.12.
-[Sun Jan 20 06:25:06.355440 2019] [mpm_event:notice] [pid 8287:tid 140389922641792] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
-[Sun Jan 20 06:25:06.355448 2019] [core:notice] [pid 8287:tid 140389922641792] AH00094: Command line: '/usr/sbin/apache2'
-[Sun Jan 20 06:27:20.170237 2019] [wsgi:error] [pid 29720:tid 140389713434368] [client 213.91.164.126:57172] mod_wsgi (pid=29720): Target WSGI script '/var/www/FlaskApp/catlogapp.wsgi' cannot be loaded as Python module.
-[Sun Jan 20 06:27:20.170276 2019] [wsgi:error] [pid 29720:tid 140389713434368] [client 213.91.164.126:57172] mod_wsgi (pid=29720): Exception occurred processing WSGI script '/var/www/FlaskApp/catlogapp.wsgi'.
-[Sun Jan 20 06:27:20.170294 2019] [wsgi:error] [pid 29720:tid 140389713434368] [client 213.91.164.126:57172] Traceback (most recent call last):
-[Sun Jan 20 06:27:20.170313 2019] [wsgi:error] [pid 29720:tid 140389713434368] [client 213.91.164.126:57172]   File "/var/www/FlaskApp/catlogapp.wsgi", line 7, in <module>
-[Sun Jan 20 06:27:20.170361 2019] [wsgi:error] [pid 29720:tid 140389713434368] [client 213.91.164.126:57172]    from app import app as application
-[Sun Jan 20 06:27:20.170367 2019] [wsgi:error] [pid 29720:tid 140389713434368] [client 213.91.164.126:57172]   File "/var/www/FlaskApp/CatlogApp/app.py", line 5, in <module>
-[Sun Jan 20 06:27:20.170471 2019] [wsgi:error] [pid 29720:tid 140389713434368] [client 213.91.164.126:57172]    from flask import Flask, render_template, request, redirect, jsonify, url_for
-[Sun Jan 20 06:27:20.170487 2019] [wsgi:error] [pid 29720:tid 140389713434368] [client 213.91.164.126:57172] ImportError: No module named flask
-[Sun Jan 20 07:16:44.141969 2019] [wsgi:error] [pid 29720:tid 140389705041664] [client 5.58.42.113:52238] mod_wsgi (pid=29720): Target WSGI script '/var/www/FlaskApp/catlogapp.wsgi' cannot be loaded as Python module.
-[Sun Jan 20 07:16:44.151507 2019] [wsgi:error] [pid 29720:tid 140389705041664] [client 5.58.42.113:52238] mod_wsgi (pid=29720): Exception occurred processing WSGI script '/var/www/FlaskApp/catlogapp.wsgi'.
-[Sun Jan 20 07:16:44.151612 2019] [wsgi:error] [pid 29720:tid 140389705041664] [client 5.58.42.113:52238] Traceback (most recent call last):
-[Sun Jan 20 07:16:44.151647 2019] [wsgi:error] [pid 29720:tid 140389705041664] [client 5.58.42.113:52238]   File "/var/www/FlaskApp/catlogapp.wsgi", line 7, in <module>
-[Sun Jan 20 07:16:44.151694 2019] [wsgi:error] [pid 29720:tid 140389705041664] [client 5.58.42.113:52238]     from app import app as application
-[Sun Jan 20 07:16:44.151702 2019] [wsgi:error] [pid 29720:tid 140389705041664] [client 5.58.42.113:52238]   File "/var/www/FlaskApp/CatlogApp/app.py", line 5, in <module>
-[Sun Jan 20 07:16:44.151716 2019] [wsgi:error] [pid 29720:tid 140389705041664] [client 5.58.42.113:52238]     from flask import Flask, render_template, request, redirect, jsonify, url_for
-[Sun Jan 20 07:16:44.151735 2019] [wsgi:error] [pid 29720:tid 140389705041664] [client 5.58.42.113:52238] ImportError: No module named flask
-[Sun Jan 20 07:26:43.697084 2019] [wsgi:error] [pid 29721:tid 140389713434368] [client 78.24.219.144:54211] mod_wsgi (pid=29721): Target WSGI script '/var/www/FlaskApp/catlogapp.wsgi' cannot be loaded as Python module.
-[Sun Jan 20 07:26:43.697135 2019] [wsgi:error] [pid 29721:tid 140389713434368] [client 78.24.219.144:54211] mod_wsgi (pid=29721): Exception occurred processing WSGI script '/var/www/FlaskApp/catlogapp.wsgi'.
-[Sun Jan 20 07:26:43.697159 2019] [wsgi:error] [pid 29721:tid 140389713434368] [client 78.24.219.144:54211] Traceback (most recent call last):
-[Sun Jan 20 07:26:43.697183 2019] [wsgi:error] [pid 29721:tid 140389713434368] [client 78.24.219.144:54211]   File "/var/www/FlaskApp/catlogapp.wsgi", line 7, in <module>
-[Sun Jan 20 07:26:43.697256 2019] [wsgi:error] [pid 29721:tid 140389713434368] [client 78.24.219.144:54211]    from app import app as application
-[Sun Jan 20 07:26:43.697275 2019] [wsgi:error] [pid 29721:tid 140389713434368] [client 78.24.219.144:54211]   File "/var/www/FlaskApp/CatlogApp/app.py", line 5, in <module>
-[Sun Jan 20 07:26:43.697435 2019] [wsgi:error] [pid 29721:tid 140389713434368] [client 78.24.219.144:54211]    from flask import Flask, render_template, request, redirect, jsonify, url_for
-[Sun Jan 20 07:26:43.697457 2019] [wsgi:error] [pid 29721:tid 140389713434368] [client 78.24.219.144:54211] ImportError: No module named flask
-[Sun Jan 20 09:41:16.837608 2019] [mpm_event:notice] [pid 8287:tid 140389922641792] AH00491: caught SIGTERM, shutting down
-[Sun Jan 20 09:41:16.919391 2019] [wsgi:warn] [pid 30732:tid 140334405519232] mod_wsgi: Compiled for Python/2.7.11.
-[Sun Jan 20 09:41:16.919432 2019] [wsgi:warn] [pid 30732:tid 140334405519232] mod_wsgi: Runtime using Python/2.7.12.
-[Sun Jan 20 09:41:16.920083 2019] [mpm_event:notice] [pid 30732:tid 140334405519232] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
-[Sun Jan 20 09:41:16.920106 2019] [core:notice] [pid 30732:tid 140334405519232] AH00094: Command line: '/usr/sbin/apache2'
-[Sun Jan 20 10:17:54.069617 2019] [wsgi:error] [pid 30735:tid 140334197618432] [client 51.38.12.21:40365] mod_wsgi (pid=30735): Target WSGI script '/var/www/FlaskApp/catlogapp.wsgi' cannot be loaded as Python module.
-[Sun Jan 20 10:17:54.069657 2019] [wsgi:error] [pid 30735:tid 140334197618432] [client 51.38.12.21:40365] mod_wsgi (pid=30735): Exception occurred processing WSGI script '/var/www/FlaskApp/catlogapp.wsgi'.
-[Sun Jan 20 10:17:54.069672 2019] [wsgi:error] [pid 30735:tid 140334197618432] [client 51.38.12.21:40365] Traceback (most recent call last):
-[Sun Jan 20 10:17:54.069688 2019] [wsgi:error] [pid 30735:tid 140334197618432] [client 51.38.12.21:40365]   File "/var/www/FlaskApp/catlogapp.wsgi", line 7, in <module>
-[Sun Jan 20 10:17:54.069733 2019] [wsgi:error] [pid 30735:tid 140334197618432] [client 51.38.12.21:40365]     from FlaskApp import app as application
-[Sun Jan 20 10:17:54.069748 2019] [wsgi:error] [pid 30735:tid 140334197618432] [client 51.38.12.21:40365] ImportError: No module named FlaskApp
-[Sun Jan 20 10:18:57.158524 2019] [wsgi:error] [pid 30736:tid 140334054942464] [client 95.218.46.244:51945] mod_wsgi (pid=30736): Target WSGI script '/var/www/FlaskApp/catlogapp.wsgi' cannot be loaded as Python module.
-[Sun Jan 20 10:18:57.158565 2019] [wsgi:error] [pid 30736:tid 140334054942464] [client 95.218.46.244:51945] mod_wsgi (pid=30736): Exception occurred processing WSGI script '/var/www/FlaskApp/catlogapp.wsgi'.
-[Sun Jan 20 10:18:57.158578 2019] [wsgi:error] [pid 30736:tid 140334054942464] [client 95.218.46.244:51945] Traceback (most recent call last):
-[Sun Jan 20 10:18:57.158593 2019] [wsgi:error] [pid 30736:tid 140334054942464] [client 95.218.46.244:51945]   File "/var/www/FlaskApp/catlogapp.wsgi", line 7, in <module>
-[Sun Jan 20 10:18:57.158635 2019] [wsgi:error] [pid 30736:tid 140334054942464] [client 95.218.46.244:51945]    from FlaskApp import app as application
-[Sun Jan 20 10:18:57.158648 2019] [wsgi:error] [pid 30736:tid 140334054942464] [client 95.218.46.244:51945] ImportError: No module named FlaskApp
-[Sun Jan 20 10:41:27.981672 2019] [mpm_event:notice] [pid 30732:tid 140334405519232] AH00491: caught SIGTERM, shutting down
-[Sun Jan 20 10:41:28.066493 2019] [wsgi:warn] [pid 31348:tid 140103394015104] mod_wsgi: Compiled for Python/2.7.11.
-[Sun Jan 20 10:41:28.066539 2019] [wsgi:warn] [pid 31348:tid 140103394015104] mod_wsgi: Runtime using Python/2.7.12.
-[Sun Jan 20 10:41:28.067368 2019] [mpm_event:notice] [pid 31348:tid 140103394015104] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
-[Sun Jan 20 10:41:28.067387 2019] [core:notice] [pid 31348:tid 140103394015104] AH00094: Command line: '/usr/sbin/apache2'
-[Sun Jan 20 10:41:41.070560 2019] [wsgi:error] [pid 31351:tid 140103289947904] [remote 95.218.46.244:20815] mod_wsgi (pid=31351): Target WSGI script '/var/www/FlaskApp/catlogapp.wsgi' cannot be loaded as Python module.
-[Sun Jan 20 10:41:41.070608 2019] [wsgi:error] [pid 31351:tid 140103289947904] [remote 95.218.46.244:20815] mod_wsgi (pid=31351): Exception occurred processing WSGI script '/var/www/FlaskApp/catlogapp.wsgi'.
-[Sun Jan 20 10:41:41.070622 2019] [wsgi:error] [pid 31351:tid 140103289947904] [remote 95.218.46.244:20815] Traceback (most recent call last):
-[Sun Jan 20 10:41:41.070638 2019] [wsgi:error] [pid 31351:tid 140103289947904] [remote 95.218.46.244:20815]   File "/var/www/FlaskApp/catlogapp.wsgi", line 7, in <module>
-[Sun Jan 20 10:41:41.070680 2019] [wsgi:error] [pid 31351:tid 140103289947904] [remote 95.218.46.244:20815]    from FlaskApp import app as application
-[Sun Jan 20 10:41:41.070695 2019] [wsgi:error] [pid 31351:tid 140103289947904] [remote 95.218.46.244:20815] ImportError: No module named FlaskApp
-[Sun Jan 20 10:41:47.524330 2019] [wsgi:error] [pid 31351:tid 140103172351744] [remote 95.218.46.244:19791] mod_wsgi (pid=31351): Target WSGI script '/var/www/FlaskApp/catlogapp.wsgi' cannot be loaded as Python module.
-[Sun Jan 20 10:41:47.524392 2019] [wsgi:error] [pid 31351:tid 140103172351744] [remote 95.218.46.244:19791] mod_wsgi (pid=31351): Exception occurred processing WSGI script '/var/www/FlaskApp/catlogapp.wsgi'.
-[Sun Jan 20 10:41:47.524426 2019] [wsgi:error] [pid 31351:tid 140103172351744] [remote 95.218.46.244:19791] Traceback (most recent call last):
-[Sun Jan 20 10:41:47.524461 2019] [wsgi:error] [pid 31351:tid 140103172351744] [remote 95.218.46.244:19791]   File "/var/www/FlaskApp/catlogapp.wsgi", line 7, in <module>
-[Sun Jan 20 10:41:47.524524 2019] [wsgi:error] [pid 31351:tid 140103172351744] [remote 95.218.46.244:19791]    from FlaskApp import app as application
-[Sun Jan 20 10:41:47.524566 2019] [wsgi:error] [pid 31351:tid 140103172351744] [remote 95.218.46.244:19791] ImportError: No module named FlaskApp
+grader@Lohy:/var/www/catalog$ sudo tail /var/log/apache2/error.log
+[Sun Jan 20 20:48:06.352414 2019] [wsgi:warn] [pid 2944:tid 140385337198464] mod_wsgi: Compiled for Python/2.7.11.
+[Sun Jan 20 20:48:06.352465 2019] [wsgi:warn] [pid 2944:tid 140385337198464] mod_wsgi: Runtime using Python/2.7.12.
+[Sun Jan 20 20:48:06.353155 2019] [mpm_event:notice] [pid 2944:tid 140385337198464] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Sun Jan 20 20:48:06.353179 2019] [core:notice] [pid 2944:tid 140385337198464] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jan 20 20:48:11.341342 2019] [mpm_event:notice] [pid 2944:tid 140385337198464] AH00493: SIGUSR1 received. Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Sun Jan 20 20:48:11.354481 2019] [wsgi:warn] [pid 2944:tid 140385337198464] mod_wsgi: Compiled for Python/2.7.11.
+[Sun Jan 20 20:48:11.354489 2019] [wsgi:warn] [pid 2944:tid 140385337198464] mod_wsgi: Runtime using Python/2.7.12.
+[Sun Jan 20 20:48:11.354522 2019] [mpm_event:notice] [pid 2944:tid 140385337198464] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Sun Jan 20 20:48:11.354526 2019] [core:notice] [pid 2944:tid 140385337198464] AH00094: Command line: '/usr/sbin/apache2'
