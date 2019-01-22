@@ -1,12 +1,12 @@
-grader@Lohy:/var/www/catalog$ clear
-grader@Lohy:/var/www/catalog$ sudo tail /var/log/apache2/error.log
-[Sun Jan 20 21:09:33.613050 2019] [wsgi:warn] [pid 3845:tid 139695816828800] mod_wsgi: Compiled for Python/2.7.11.
-[Sun Jan 20 21:09:33.613091 2019] [wsgi:warn] [pid 3845:tid 139695816828800] mod_wsgi: Runtime using Python/2.7.12.
-[Sun Jan 20 21:09:33.613673 2019] [mpm_event:notice] [pid 3845:tid 139695816828800] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
-[Sun Jan 20 21:09:33.613696 2019] [core:notice] [pid 3845:tid 139695816828800] AH00094: Command line: '/usr/sbin/apache2'
-[Sun Jan 20 21:09:39.071398 2019] [mpm_event:notice] [pid 3845:tid 139695816828800] AH00493: SIGUSR1 received. Doing graceful restart
-AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
-[Sun Jan 20 21:09:39.086674 2019] [wsgi:warn] [pid 3845:tid 139695816828800] mod_wsgi: Compiled for Python/2.7.11.
-[Sun Jan 20 21:09:39.086680 2019] [wsgi:warn] [pid 3845:tid 139695816828800] mod_wsgi: Runtime using Python/2.7.12.
-[Sun Jan 20 21:09:39.086711 2019] [mpm_event:notice] [pid 3845:tid 139695816828800] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
-[Sun Jan 20 21:09:39.086715 2019] [core:notice] [pid 3845:tid 139695816828800] AH00094: Command line: '/usr/sbin/apache2'
+grader@Lohy:~$ sudo tail /var/log/apache2/error.log
+[sudo] password for grader:
+[Tue Jan 22 16:44:37.544143 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539] Traceback (most recent call last):
+[Tue Jan 22 16:44:37.544163 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 16:44:37.544192 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]     from catalog import app as application
+[Tue Jan 22 16:44:37.544201 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 16:44:37.544216 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]     open('/var/www/catalog/catalog/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 16:44:37.544225 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]   File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+[Tue Jan 22 16:44:37.544241 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]     return _default_decoder.decode(s)
+[Tue Jan 22 16:44:37.544248 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]   File "/usr/lib/python2.7/json/decoder.py", line 367, in decode
+[Tue Jan 22 16:44:37.544273 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]     raise ValueError(errmsg("Extra data", s, end, len(s)))
+[Tue Jan 22 16:44:37.544292 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539] ValueError: Extra data: line 1 column 13 - line 2 column 1 (char 12 - 73)
