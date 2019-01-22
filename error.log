@@ -1,5 +1,266 @@
-grader@Lohy:~$ sudo tail /var/log/apache2/error.log
-[sudo] password for grader:
+grader@Lohy:~$ sudo cat /var/log/apache2/error.log
+[Tue Jan 22 06:25:06.705598 2019] [wsgi:warn] [pid 7754:tid 140700208166784] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 06:25:06.705616 2019] [wsgi:warn] [pid 7754:tid 140700208166784] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 06:25:06.705966 2019] [mpm_event:notice] [pid 7754:tid 140700208166784] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 06:25:06.705986 2019] [core:notice] [pid 7754:tid 140700208166784] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 07:06:44.808466 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 188.253.100.80:13892] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 07:06:44.808508 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 188.253.100.80:13892] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 07:06:44.808522 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 188.253.100.80:13892] Traceback (most recent call last):
+[Tue Jan 22 07:06:44.808536 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 188.253.100.80:13892]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 07:06:44.808577 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 188.253.100.80:13892]    from catalog import app as application
+[Tue Jan 22 07:06:44.808582 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 188.253.100.80:13892]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 07:06:44.808687 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 188.253.100.80:13892]    import requests
+[Tue Jan 22 07:06:44.808701 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 188.253.100.80:13892] ImportError: No module named requests
+[Tue Jan 22 07:12:12.569631 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 209.17.97.122:13892] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 07:12:12.570880 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 209.17.97.122:13892] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 07:12:12.570920 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 209.17.97.122:13892] Traceback (most recent call last):
+[Tue Jan 22 07:12:12.570941 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 209.17.97.122:13892]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 07:12:12.570976 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 209.17.97.122:13892]     from catalog import app as application
+[Tue Jan 22 07:12:12.570983 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 209.17.97.122:13892]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 07:12:12.570994 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 209.17.97.122:13892]     import requests
+[Tue Jan 22 07:12:12.571012 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 209.17.97.122:13892] ImportError: No module named requests
+[Tue Jan 22 07:58:05.947652 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.213.177.124:10820] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 07:58:05.947711 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.213.177.124:10820] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 07:58:05.947744 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.213.177.124:10820] Traceback (most recent call last):
+[Tue Jan 22 07:58:05.947774 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.213.177.124:10820]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 07:58:05.947823 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.213.177.124:10820]    from catalog import app as application
+[Tue Jan 22 07:58:05.947838 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.213.177.124:10820]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 07:58:05.947876 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.213.177.124:10820]    import requests
+[Tue Jan 22 07:58:05.947906 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.213.177.124:10820] ImportError: No module named requests
+[Tue Jan 22 08:06:53.861893 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 95.37.209.138:53585] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 08:06:53.861943 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 95.37.209.138:53585] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 08:06:53.861970 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 95.37.209.138:53585] Traceback (most recent call last):
+[Tue Jan 22 08:06:53.861994 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 95.37.209.138:53585]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 08:06:53.862048 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 95.37.209.138:53585]     from catalog import app as application
+[Tue Jan 22 08:06:53.862059 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 95.37.209.138:53585]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 08:06:53.862075 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 95.37.209.138:53585]     import requests
+[Tue Jan 22 08:06:53.862099 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 95.37.209.138:53585] ImportError: No module named requests
+[Tue Jan 22 08:06:55.180517 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.37.209.138:53585] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 08:06:55.180586 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.37.209.138:53585] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 08:06:55.180634 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.37.209.138:53585] Traceback (most recent call last):
+[Tue Jan 22 08:06:55.180680 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.37.209.138:53585]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 08:06:55.180744 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.37.209.138:53585]     from catalog import app as application
+[Tue Jan 22 08:06:55.180761 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.37.209.138:53585]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 08:06:55.180787 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.37.209.138:53585]     import requests
+[Tue Jan 22 08:06:55.180820 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 95.37.209.138:53585] ImportError: No module named requests
+[Tue Jan 22 08:13:39.484288 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 90.174.2.40:13892] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 08:13:39.484340 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 90.174.2.40:13892] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 08:13:39.484368 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 90.174.2.40:13892] Traceback (most recent call last):
+[Tue Jan 22 08:13:39.484392 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 90.174.2.40:13892]   File"/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 08:13:39.484432 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 90.174.2.40:13892]     from catalog import app as application
+[Tue Jan 22 08:13:39.484442 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 90.174.2.40:13892]   File"/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 08:13:39.484471 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 90.174.2.40:13892]     import requests
+[Tue Jan 22 08:13:39.484494 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 90.174.2.40:13892] ImportError: No module named requests
+[Tue Jan 22 08:14:13.460982 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 127.0.0.1:13892] mod_wsgi(pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 08:14:13.461021 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 127.0.0.1:13892] mod_wsgi(pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 08:14:13.461047 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 127.0.0.1:13892] Traceback (most recent call last):
+[Tue Jan 22 08:14:13.461072 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 127.0.0.1:13892]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 08:14:13.461110 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 127.0.0.1:13892]     fromcatalog import app as application
+[Tue Jan 22 08:14:13.461120 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 127.0.0.1:13892]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 08:14:13.461136 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 127.0.0.1:13892]     import requests
+[Tue Jan 22 08:14:13.461158 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 127.0.0.1:13892] ImportError: No module named requests
+[Tue Jan 22 08:14:30.710302 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 104.248.243.155:13892] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 08:14:30.710339 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 104.248.243.155:13892] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 08:14:30.710356 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 104.248.243.155:13892] Traceback (most recent call last):
+[Tue Jan 22 08:14:30.710372 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 104.248.243.155:13892]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 08:14:30.710400 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 104.248.243.155:13892]    from catalog import app as application
+[Tue Jan 22 08:14:30.710423 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 104.248.243.155:13892]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 08:14:30.710433 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 104.248.243.155:13892]    import requests
+[Tue Jan 22 08:14:30.710450 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 104.248.243.155:13892] ImportError: No module named requests
+[Tue Jan 22 08:16:27.391177 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 195.175.107.230:13892] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 08:16:27.391229 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 195.175.107.230:13892] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 08:16:27.391253 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 195.175.107.230:13892] Traceback (most recent call last):
+[Tue Jan 22 08:16:27.391279 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 195.175.107.230:13892]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 08:16:27.391324 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 195.175.107.230:13892]    from catalog import app as application
+[Tue Jan 22 08:16:27.391337 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 195.175.107.230:13892]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 08:16:27.391356 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 195.175.107.230:13892]    import requests
+[Tue Jan 22 08:16:27.391394 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 195.175.107.230:13892] ImportError: No module named requests
+[Tue Jan 22 08:55:03.398457 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 177.102.103.168:10820] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 08:55:03.398503 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 177.102.103.168:10820] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 08:55:03.398524 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 177.102.103.168:10820] Traceback (most recent call last):
+[Tue Jan 22 08:55:03.398542 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 177.102.103.168:10820]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 08:55:03.398572 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 177.102.103.168:10820]    from catalog import app as application
+[Tue Jan 22 08:55:03.398578 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 177.102.103.168:10820]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 08:55:03.398588 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 177.102.103.168:10820]    import requests
+[Tue Jan 22 08:55:03.398628 2019] [wsgi:error] [pid 8213:tid 140699986487040] [remote 177.102.103.168:10820] ImportError: No module named requests
+[Tue Jan 22 08:55:03.402657 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 177.102.103.168:53585] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 08:55:03.402691 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 177.102.103.168:53585] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 08:55:03.402833 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 177.102.103.168:53585] Traceback (most recent call last):
+[Tue Jan 22 08:55:03.402856 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 177.102.103.168:53585]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 08:55:03.402887 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 177.102.103.168:53585]    from catalog import app as application
+[Tue Jan 22 08:55:03.402894 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 177.102.103.168:53585]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 08:55:03.402905 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 177.102.103.168:53585]    import requests
+[Tue Jan 22 08:55:03.402922 2019] [wsgi:error] [pid 8213:tid 140700087297792] [remote 177.102.103.168:53585] ImportError: No module named requests
+[Tue Jan 22 08:59:12.152054 2019] [wsgi:error] [pid 8213:tid 140699994887936] [remote 185.90.210.171:53585] mod_wsgi (pid=8213): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 08:59:12.152128 2019] [wsgi:error] [pid 8213:tid 140699994887936] [remote 185.90.210.171:53585] mod_wsgi (pid=8213): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 08:59:12.152171 2019] [wsgi:error] [pid 8213:tid 140699994887936] [remote 185.90.210.171:53585] Traceback (most recent call last):
+[Tue Jan 22 08:59:12.152209 2019] [wsgi:error] [pid 8213:tid 140699994887936] [remote 185.90.210.171:53585]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 08:59:12.152264 2019] [wsgi:error] [pid 8213:tid 140699994887936] [remote 185.90.210.171:53585]    from catalog import app as application
+[Tue Jan 22 08:59:12.152279 2019] [wsgi:error] [pid 8213:tid 140699994887936] [remote 185.90.210.171:53585]   File "/var/www/catalog/catalog/__init__.py", line 18, in <module>
+[Tue Jan 22 08:59:12.152304 2019] [wsgi:error] [pid 8213:tid 140699994887936] [remote 185.90.210.171:53585]    import requests
+[Tue Jan 22 08:59:12.152343 2019] [wsgi:error] [pid 8213:tid 140699994887936] [remote 185.90.210.171:53585] ImportError: No module named requests
+[Tue Jan 22 09:04:37.310222 2019] [mpm_event:notice] [pid 7754:tid 140700208166784] AH00491: caught SIGTERM, shutting down
+[Tue Jan 22 09:04:37.431696 2019] [wsgi:warn] [pid 9056:tid 140159911569280] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 09:04:37.431744 2019] [wsgi:warn] [pid 9056:tid 140159911569280] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 09:04:37.432530 2019] [mpm_event:notice] [pid 9056:tid 140159911569280] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 09:04:37.432555 2019] [core:notice] [pid 9056:tid 140159911569280] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 09:04:46.347201 2019] [mpm_event:notice] [pid 9056:tid 140159911569280] AH00493: SIGUSR1 received. Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Tue Jan 22 09:04:46.399704 2019] [wsgi:warn] [pid 9056:tid 140159911569280] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 09:04:46.399715 2019] [wsgi:warn] [pid 9056:tid 140159911569280] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 09:04:46.400155 2019] [mpm_event:notice] [pid 9056:tid 140159911569280] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 09:04:46.400176 2019] [core:notice] [pid 9056:tid 140159911569280] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 09:09:22.821591 2019] [mpm_event:notice] [pid 9056:tid 140159911569280] AH00491: caught SIGTERM, shutting down
+[Tue Jan 22 09:09:22.918349 2019] [wsgi:warn] [pid 9314:tid 140638338881408] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 09:09:22.918386 2019] [wsgi:warn] [pid 9314:tid 140638338881408] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 09:09:22.919192 2019] [mpm_event:notice] [pid 9314:tid 140638338881408] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 09:09:22.919214 2019] [core:notice] [pid 9314:tid 140638338881408] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 09:09:28.266570 2019] [mpm_event:notice] [pid 9314:tid 140638338881408] AH00493: SIGUSR1 received. Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Tue Jan 22 09:09:28.328673 2019] [wsgi:warn] [pid 9314:tid 140638338881408] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 09:09:28.328684 2019] [wsgi:warn] [pid 9314:tid 140638338881408] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 09:09:28.329241 2019] [mpm_event:notice] [pid 9314:tid 140638338881408] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 09:09:28.329272 2019] [core:notice] [pid 9314:tid 140638338881408] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 10:26:38.306909 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 45.4.252.14:34012] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 10:26:38.306944 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 45.4.252.14:34012] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 10:26:38.306960 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 45.4.252.14:34012] Traceback (most recent call last):
+[Tue Jan 22 10:26:38.306975 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 45.4.252.14:34012]   File"/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 10:26:38.307013 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 45.4.252.14:34012]     from catalog import app as application
+[Tue Jan 22 10:26:38.307020 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 45.4.252.14:34012]   File"/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 10:26:38.307133 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 45.4.252.14:34012]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 10:26:38.307152 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 45.4.252.14:34012] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 10:36:53.768930 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 114.30.75.220:32988] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 10:36:53.768974 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 114.30.75.220:32988] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 10:36:53.768991 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 114.30.75.220:32988] Traceback (most recent call last):
+[Tue Jan 22 10:36:53.769005 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 114.30.75.220:32988]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 10:36:53.769026 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 114.30.75.220:32988]     from catalog import app as application
+[Tue Jan 22 10:36:53.769032 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 114.30.75.220:32988]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 10:36:53.769043 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 114.30.75.220:32988]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 10:36:53.769058 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 114.30.75.220:32988] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 11:01:15.771795 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 95.37.209.138:30684] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 11:01:15.771858 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 95.37.209.138:30684] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 11:01:15.771896 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 95.37.209.138:30684] Traceback (most recent call last):
+[Tue Jan 22 11:01:15.771925 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 95.37.209.138:30684]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 11:01:15.771966 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 95.37.209.138:30684]     from catalog import app as application
+[Tue Jan 22 11:01:15.771982 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 95.37.209.138:30684]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 11:01:15.772007 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 95.37.209.138:30684]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 11:01:15.772040 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 95.37.209.138:30684] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 11:01:17.237188 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.37.209.138:8170] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 11:01:17.237243 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.37.209.138:8170] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 11:01:17.237277 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.37.209.138:8170] Traceback (most recent call last):
+[Tue Jan 22 11:01:17.237305 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.37.209.138:8170]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 11:01:17.237345 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.37.209.138:8170]     from catalog import app as application
+[Tue Jan 22 11:01:17.237378 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.37.209.138:8170]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 11:01:17.237404 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.37.209.138:8170]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 11:01:17.237435 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.37.209.138:8170] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 11:41:34.051952 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 103.204.84.86:8170] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 11:41:34.052037 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 103.204.84.86:8170] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 11:41:34.052076 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 103.204.84.86:8170] Traceback (most recent call last):
+[Tue Jan 22 11:41:34.052105 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 103.204.84.86:8170]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 11:41:34.052144 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 103.204.84.86:8170]     from catalog import app as application
+[Tue Jan 22 11:41:34.052159 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 103.204.84.86:8170]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 11:41:34.052185 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 103.204.84.86:8170]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 11:41:34.052217 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 103.204.84.86:8170] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 11:58:27.444454 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 181.112.35.94:34012] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 11:58:27.444506 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 181.112.35.94:34012] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 11:58:27.444532 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 181.112.35.94:34012] Traceback (most recent call last):
+[Tue Jan 22 11:58:27.444553 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 181.112.35.94:34012]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 11:58:27.444583 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 181.112.35.94:34012]     from catalog import app as application
+[Tue Jan 22 11:58:27.444594 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 181.112.35.94:34012]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 11:58:27.444612 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 181.112.35.94:34012]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 11:58:27.444636 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 181.112.35.94:34012] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 12:29:05.331708 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.96.218:34012] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 12:29:05.331754 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.96.218:34012] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 12:29:05.331775 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.96.218:34012] Traceback (most recent call last):
+[Tue Jan 22 12:29:05.331803 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.96.218:34012]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 12:29:05.331832 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.96.218:34012]     from catalog import app as application
+[Tue Jan 22 12:29:05.331841 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.96.218:34012]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 12:29:05.331856 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.96.218:34012]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 12:29:05.331875 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.96.218:34012] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 12:38:46.775727 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 32.104.18.202:34012] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 12:38:46.775788 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 32.104.18.202:34012] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 12:38:46.775817 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 32.104.18.202:34012] Traceback (most recent call last):
+[Tue Jan 22 12:38:46.775841 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 32.104.18.202:34012]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 12:38:46.775872 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 32.104.18.202:34012]     from catalog import app as application
+[Tue Jan 22 12:38:46.775884 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 32.104.18.202:34012]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 12:38:46.775900 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 32.104.18.202:34012]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 12:38:46.775922 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 32.104.18.202:34012] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 12:38:52.732477 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 32.104.18.202:32988] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 12:38:52.732515 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 32.104.18.202:32988] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 12:38:52.732533 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 32.104.18.202:32988] Traceback (most recent call last):
+[Tue Jan 22 12:38:52.732546 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 32.104.18.202:32988]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 12:38:52.732566 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 32.104.18.202:32988]     from catalog import app as application
+[Tue Jan 22 12:38:52.732573 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 32.104.18.202:32988]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 12:38:52.732583 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 32.104.18.202:32988]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 12:38:52.732599 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 32.104.18.202:32988] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 12:43:05.025187 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.213.177.125:30684] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 12:43:05.025232 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.213.177.125:30684] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 12:43:05.025264 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.213.177.125:30684] Traceback (most recent call last):
+[Tue Jan 22 12:43:05.025281 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.213.177.125:30684]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 12:43:05.025306 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.213.177.125:30684]    from catalog import app as application
+[Tue Jan 22 12:43:05.025315 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.213.177.125:30684]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 12:43:05.025328 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.213.177.125:30684]    open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 12:43:05.025348 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 95.213.177.125:30684] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 14:27:01.710874 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.97.90:8170] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 14:27:01.710921 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.97.90:8170] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 14:27:01.710943 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.97.90:8170] Traceback (most recent call last):
+[Tue Jan 22 14:27:01.710958 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.97.90:8170]   File"/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 14:27:01.710979 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.97.90:8170]     from catalog import app as application
+[Tue Jan 22 14:27:01.710985 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.97.90:8170]   File"/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 14:27:01.710996 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.97.90:8170]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 14:27:01.711011 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 209.17.97.90:8170] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 15:42:48.131703 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 82.135.15.220:8170] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 15:42:48.131798 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 82.135.15.220:8170] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 15:42:48.131869 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 82.135.15.220:8170] Traceback (most recent call last):
+[Tue Jan 22 15:42:48.131894 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 82.135.15.220:8170]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 15:42:48.131958 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 82.135.15.220:8170]     from catalog import app as application
+[Tue Jan 22 15:42:48.131971 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 82.135.15.220:8170]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 15:42:48.131992 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 82.135.15.220:8170]     open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 15:42:48.132041 2019] [wsgi:error] [pid 9420:tid 140638117201664] [remote 82.135.15.220:8170] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 16:12:51.125515 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 54.245.157.203:34012] mod_wsgi (pid=9420): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 16:12:51.125589 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 54.245.157.203:34012] mod_wsgi (pid=9420): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 16:12:51.125620 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 54.245.157.203:34012] Traceback (most recent call last):
+[Tue Jan 22 16:12:51.125645 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 54.245.157.203:34012]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 16:12:51.125680 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 54.245.157.203:34012]    from catalog import app as application
+[Tue Jan 22 16:12:51.125693 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 54.245.157.203:34012]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 16:12:51.125714 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 54.245.157.203:34012]    open('/var/www/FlaskApp/CatlogApp/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 16:12:51.125742 2019] [wsgi:error] [pid 9420:tid 140638218012416] [remote 54.245.157.203:34012] IOError: [Errno 2] No such file or directory: '/var/www/FlaskApp/CatlogApp/client_secrets.json'
+[Tue Jan 22 16:39:41.232036 2019] [mpm_event:notice] [pid 9314:tid 140638338881408] AH00491: caught SIGTERM, shutting down
+[Tue Jan 22 16:39:41.369209 2019] [wsgi:warn] [pid 11198:tid 140447060252544] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 16:39:41.369250 2019] [wsgi:warn] [pid 11198:tid 140447060252544] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 16:39:41.370020 2019] [mpm_event:notice] [pid 11198:tid 140447060252544] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 16:39:41.370046 2019] [core:notice] [pid 11198:tid 140447060252544] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 16:39:49.208275 2019] [mpm_event:notice] [pid 11198:tid 140447060252544] AH00493: SIGUSR1 received. Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Tue Jan 22 16:39:49.261368 2019] [wsgi:warn] [pid 11198:tid 140447060252544] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 16:39:49.261376 2019] [wsgi:warn] [pid 11198:tid 140447060252544] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 16:39:49.261831 2019] [mpm_event:notice] [pid 11198:tid 140447060252544] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 16:39:49.261860 2019] [core:notice] [pid 11198:tid 140447060252544] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 16:44:00.124990 2019] [mpm_event:notice] [pid 11198:tid 140447060252544] AH00491: caught SIGTERM, shutting down
+[Tue Jan 22 16:44:00.214267 2019] [wsgi:warn] [pid 11531:tid 139748867532672] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 16:44:00.214322 2019] [wsgi:warn] [pid 11531:tid 139748867532672] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 16:44:00.215140 2019] [mpm_event:notice] [pid 11531:tid 139748867532672] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 16:44:00.215163 2019] [core:notice] [pid 11531:tid 139748867532672] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 16:44:09.736433 2019] [mpm_event:notice] [pid 11531:tid 139748867532672] AH00493: SIGUSR1 received. Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Tue Jan 22 16:44:09.793224 2019] [wsgi:warn] [pid 11531:tid 139748867532672] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 16:44:09.793239 2019] [wsgi:warn] [pid 11531:tid 139748867532672] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 16:44:09.793978 2019] [mpm_event:notice] [pid 11531:tid 139748867532672] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 16:44:09.794019 2019] [core:notice] [pid 11531:tid 139748867532672] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 16:44:33.605734 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563] mod_wsgi (pid=11637): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 16:44:33.605763 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563] mod_wsgi (pid=11637): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
+[Tue Jan 22 16:44:33.605777 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563] Traceback (most recent call last):
+[Tue Jan 22 16:44:33.605793 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
+[Tue Jan 22 16:44:33.605828 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563]     from catalog import app as application
+[Tue Jan 22 16:44:33.605834 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563]   File "/var/www/catalog/catalog/__init__.py", line 25, in <module>
+[Tue Jan 22 16:44:33.605939 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563]     open('/var/www/catalog/catalog/client_secrets.json', 'r').read())['web']['client_id']
+[Tue Jan 22 16:44:33.605944 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563]   File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+[Tue Jan 22 16:44:33.606546 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563]     return _default_decoder.decode(s)
+[Tue Jan 22 16:44:33.606561 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563]   File "/usr/lib/python2.7/json/decoder.py", line 367, in decode
+[Tue Jan 22 16:44:33.606916 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563]     raise ValueError(errmsg("Extra data", s, end, len(s)))
+[Tue Jan 22 16:44:33.606943 2019] [wsgi:error] [pid 11637:tid 139748746663680] [remote 51.218.215.5:58563] ValueError: Extra data: line 1 column 13 - line 2 column 1 (char 12 - 73)
+[Tue Jan 22 16:44:37.544078 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539] mod_wsgi (pid=11637): Target WSGI script '/var/www/catalog/catalog.wsgi' cannot be loaded as Python module.
+[Tue Jan 22 16:44:37.544120 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539] mod_wsgi (pid=11637): Exception occurred processing WSGI script '/var/www/catalog/catalog.wsgi'.
 [Tue Jan 22 16:44:37.544143 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539] Traceback (most recent call last):
 [Tue Jan 22 16:44:37.544163 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]   File "/var/www/catalog/catalog.wsgi", line 7, in <module>
 [Tue Jan 22 16:44:37.544192 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]     from catalog import app as application
@@ -10,3 +271,15 @@ grader@Lohy:~$ sudo tail /var/log/apache2/error.log
 [Tue Jan 22 16:44:37.544248 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]   File "/usr/lib/python2.7/json/decoder.py", line 367, in decode
 [Tue Jan 22 16:44:37.544273 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539]     raise ValueError(errmsg("Extra data", s, end, len(s)))
 [Tue Jan 22 16:44:37.544292 2019] [wsgi:error] [pid 11637:tid 139748763465472] [remote 51.218.215.5:57539] ValueError: Extra data: line 1 column 13 - line 2 column 1 (char 12 - 73)
+[Tue Jan 22 17:02:20.766910 2019] [mpm_event:notice] [pid 11531:tid 139748867532672] AH00491: caught SIGTERM, shutting down
+[Tue Jan 22 17:02:20.893493 2019] [wsgi:warn] [pid 11972:tid 139900138305408] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 17:02:20.893533 2019] [wsgi:warn] [pid 11972:tid 139900138305408] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 17:02:20.894260 2019] [mpm_event:notice] [pid 11972:tid 139900138305408] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 17:02:20.894283 2019] [core:notice] [pid 11972:tid 139900138305408] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jan 22 17:02:26.318219 2019] [mpm_event:notice] [pid 11972:tid 139900138305408] AH00493: SIGUSR1 received. Doing graceful restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+[Tue Jan 22 17:02:26.380116 2019] [wsgi:warn] [pid 11972:tid 139900138305408] mod_wsgi: Compiled for Python/2.7.11.
+[Tue Jan 22 17:02:26.380126 2019] [wsgi:warn] [pid 11972:tid 139900138305408] mod_wsgi: Runtime using Python/2.7.12.
+[Tue Jan 22 17:02:26.380608 2019] [mpm_event:notice] [pid 11972:tid 139900138305408] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/2.7.12 configured -- resuming normal operations
+[Tue Jan 22 17:02:26.380640 2019] [core:notice] [pid 11972:tid 139900138305408] AH00094: Command line: '/usr/sbin/apache2'
+grader@Lohy:~$
